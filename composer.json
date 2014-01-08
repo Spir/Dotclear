@@ -1,6 +1,7 @@
 {
     "name": "spir/dotclear",
     "description": "Dotclear XML-RPC client library",
+    "keywords": ["dotclear", "xml", "api", "rpc"],
     "require": {
 	"php": ">=5.3.0",
         "lstrojny/fxmlrpc": "0.8.4"

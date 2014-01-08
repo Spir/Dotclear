@@ -3,6 +3,8 @@ Dotclear
 
 Dotclear XML-RPC client library
 
+[![Build Status](https://travis-ci.org/Spir/Dotclear.png?branch=master)](https://travis-ci.org/Spir/Dotclear)
+
 
 Quick example
 ----
