@@ -93,4 +93,65 @@ interface ClientInterface
 	 */
 	public function deletePost($id=null);
 	
+	/**
+	 * Attach a category to a given post
+	 * More infos: http://codex.wordpress.org/XML-RPC_MovableType_API#mt.setPostCategories
+	 * 
+	 * @param integer $postId
+	 * @param integer $categoryId
+	 * @throws InvalidArgumentException
+	 * @throws Exception
+	 */
+	public function setPostCategory($postId=null, $categoryId=null);
+	
+	/**
+	 * Create a new category
+	 * More infos : http://codex.wordpress.org/XML-RPC_wp#wp.newCategory
+	 * 
+	 * @param string $name name of the new category
+	 * @param string $slug slug of the new category
+	 * @param string $description description of the new category
+	 * @param integer $parentId parent category id if any
+	 * @throws InvalidArgumentException
+	 * @throws Exception
+	 */
+	public function createCategory($name=null, $slug=null, $description=null, $parentId=null);
+	
+	/**
+	 * Get categories
+	 * More infos : http://codex.wordpress.org/XML-RPC_wp#wp.getCategories
+	 * 
+	 * @throws Exception
+	 */
+	public function getCategories();
+	
+	/**
+	 * Delete a category
+	 * More infos : http://codex.wordpress.org/XML-RPC_wp#wp.deleteCategory
+	 * 
+	 * @param integer $categoryId
+	 * @throws InvalidArgumentException
+	 * @throws Exception
+	 */
+	public function deleteCategory($id=null);
+	
+	/**
+	 * Get blog authors
+	 * More infos: http://codex.wordpress.org/XML-RPC_wp#wp.getAuthors
+	 * 
+	 * @throws Exception
+	 * @return array
+	 */
+	public function getAuthors();
+
+	/**
+	 * Upload a file to the blog
+	 * More infos : http://codex.wordpress.org/XML-RPC_MetaWeblog_API#metaWeblog.newMediaObject
+	 * 
+	 * @param string $filename
+	 * @param string $uri media URI (full url or path)
+	 * @return mixed <boolean, array> false if failed, file data if success (file name, url and type)
+	 */
+	public function newMedia($filename=null, $uri=null);
+	
 }
