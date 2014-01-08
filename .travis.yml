@@ -1,0 +1,22 @@
+language: php
+php:
+  - 5.4
+  - 5.5
+  - hhvm
+
+before_script:
+  - which pecl && echo yes | pecl install pecl_http || true
+  - wget http://getcomposer.org/composer.phar
+  - php composer.phar install --dev
+  - npm install
+
+script: phpunit
+
+notifications:
+  email:
+    - lstrojny@php.net
+
+matrix:
+  allow_failures:
+    - php: hhvm
+

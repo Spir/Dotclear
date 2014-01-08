@@ -3,7 +3,7 @@
     "description": "Dotclear XML-RPC client library",
     "require": {
 	"php": ">=5.3.0",
-        "lstrojny/fxmlrpc": "dev-master"
+        "lstrojny/fxmlrpc": "0.8.4"
     },
     "license": "MIT",
     "minimum-stability": "dev",
